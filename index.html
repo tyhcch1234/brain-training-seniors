@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>腦友記 · 每日動腦筋</title>
+<meta name="description" content="為長者同腦退化症朋友而設嘅記憶與思考小練習：大字、慢節奏、唔計時、唔計分，做錯都冇問題。">
+<meta name="theme-color" content="#2c6b4f">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="icon-btn" id="btnHome" type="button" aria-label="返回主頁">
+    <span class="icon-emoji" aria-hidden="true">🏠</span><span class="icon-text">主頁</span>
+  </button>
+  <h1 class="brand">腦友記</h1>
+  <div class="top-actions">
+    <button class="icon-btn" id="btnFont" type="button" aria-label="放大字體">
+      <span class="icon-emoji" aria-hidden="true">🔍</span><span class="icon-text" id="fontLabel">大字</span>
+    </button>
+    <button class="icon-btn" id="btnVoice" type="button" aria-pressed="true" aria-label="開關語音提示">
+      <span class="icon-emoji" aria-hidden="true">🔊</span><span class="icon-text" id="voiceLabel">語音</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= 主頁 ================= -->
+  <section class="screen is-active" id="screen-home">
+    <div class="hello">
+      <p class="hello-date" id="todayLabel">今日</p>
+      <h2 class="hello-title" id="greeting">你好</h2>
+      <p class="hello-sub" id="todaySummary">做一個小練習，動動腦筋。</p>
+    </div>
+
+    <div class="section-head">
+      <h3>揀一個練習</h3>
+      <p>做一個就夠，攰就休息，聽日再嚟。</p>
+    </div>
+    <div class="activity-grid" id="activityGrid"></div>
+
+    <div class="talk-card">
+      <h3>💬 同屋企人傾下偈</h3>
+      <p class="talk-q" id="talkQ">…</p>
+      <button class="btn btn-ghost" id="btnTalk" type="button">換一張</button>
+    </div>
+
+    <details class="caregiver">
+      <summary>給家人／照顧者的話</summary>
+      <ul>
+        <li>每次做 1 至 2 個練習就夠，大約 5 至 10 分鐘，唔好當考試。</li>
+        <li>做錯唔緊要，唔使糾正到底，可以講「我哋再睇一次」。</li>
+        <li>陪住一齊做、慢慢讀出題目，比獨自完成更有意義。</li>
+        <li>如果長者覺得攰或者煩躁，就停一停，聽日再玩。</li>
+        <li>呢個網站只係日常動腦筋的小遊戲，唔能夠代替醫生診斷或治療。</li>
+      </ul>
+    </details>
+  </section>
+
+  <!-- ================= 練習 ================= -->
+  <section class="screen" id="screen-play">
+    <div class="play-head">
+      <h2 id="playTitle">練習</h2>
+      <button class="btn btn-ghost btn-small" id="btnRead" type="button">🔊 再讀一次</button>
+    </div>
+    <p class="prompt" id="playPrompt"></p>
+    <div class="stage" id="stage"></div>
+    <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+    <div class="play-foot">
+      <button class="btn btn-ghost" id="btnRestart" type="button">🔄 再玩一次</button>
+      <button class="btn btn-ghost" id="btnQuit" type="button">◀ 返主頁</button>
+    </div>
+  </section>
+
+  <!-- ================= 完成 ================= -->
+  <section class="screen" id="screen-done">
+    <div class="done-box">
+      <div class="done-icon" id="doneIcon" aria-hidden="true">🌟</div>
+      <h2 id="doneTitle">做得好！</h2>
+      <p id="doneText"></p>
+      <div class="done-actions">
+        <button class="btn btn-primary big-btn" id="btnAgain" type="button">🔄 再做一次</button>
+        <button class="btn btn-ghost big-btn" id="btnBackHome" type="button">🏠 揀其他練習</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  為長者而設 · 唔計時、唔計分、做錯都冇問題
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/games.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "腦友記 · 每日動腦筋",
+  "short_name": "腦友記",
+  "description": "為長者同腦退化症朋友而設嘅記憶與思考小練習：大字、慢節奏、唔計時、唔計分。",
+  "lang": "zh-HK",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f1e6",
+  "theme_color": "#2c6b4f",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
